@@ -1,0 +1,1 @@
+A tiny module to provide a ajax node callback. Every link to ajax_node_callback/<div-class>/<node-id>/ajax would cause <div class=<div-class>> to be updated with the node content through ajax.

@@ -1,0 +1,4 @@
+name = AJAX Node
+description = Loads Node content through AJAX when clicking a link
+package = Comunica2
+core = 7.x

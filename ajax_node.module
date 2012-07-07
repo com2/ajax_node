@@ -1,0 +1,41 @@
+<?php
+
+/**
+ * @file
+ * AJAX Examples module file with basic examples.
+ */
+
+/**
+ * @defgroup ajax_example Example: AJAX
+ * @ingroup examples
+ * @{
+ * These examples show basic AJAX concepts.
+ *
+ * General documentation is available at
+ * @link ajax AJAX Framework documentation @endlink and at the
+ * @link http://drupal.org/node/752056 AJAX Forms handbook page @endlink.
+ *
+ * The several examples here demonstrate basic AJAX usage.
+ */
+
+/**
+ * Implements hook_menu().
+ *
+ * Sets up calls to drupal_get_form() for all our example cases.
+ *
+ * @see menu_example.module for more details on hook_menu().
+ */
+function ajax_node_menu() {
+    $items = array();
+    $items['ajax_node_callback'] = array(
+      'title' => 'whatever',
+      'page callback' => 'ajax_node_response',
+      'access callback' => 'user_access',
+      'access arguments' => array('access content'),
+      'type' => MENU_CALLBACK,
+      'file' => 'ajax_node.inc',
+      'weight' => 0,
+    );
+    return $items;
+}
+
